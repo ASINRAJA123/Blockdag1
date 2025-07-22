@@ -58,7 +58,7 @@ function App() {
         };
       }
 
-      const response = await fetch(`https://blockdag1.vercel.app//predict/${selectedCategory}`, {
+      const response = await fetch(`https://blockdag1.onrender.com/predict/${selectedCategory}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
