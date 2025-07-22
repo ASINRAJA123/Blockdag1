@@ -69,10 +69,6 @@ def agriculture_prediction():
         print(traceback.format_exc())
         return jsonify({'error': f'An internal error occurred: {e}'}), 500
 
-@app.route('/ping', methods=['GET'])
-def ping():
-    return jsonify({'message': 'pong'}), 200
-
 # === PROPERTY ENDPOINT (Placeholder) ===
 @app.route('/predict/property', methods=['POST'])
 def property_prediction():
@@ -80,6 +76,9 @@ def property_prediction():
     risk_level = predict_property_risk(data)
     return jsonify({'risk_level': risk_level})
 
+@app.route('/ping', methods=['GET'])
+def ping():
+    return jsonify({'message': 'pong'}), 200
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
