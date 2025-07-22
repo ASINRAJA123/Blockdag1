@@ -69,6 +69,9 @@ def agriculture_prediction():
         print(traceback.format_exc())
         return jsonify({'error': f'An internal error occurred: {e}'}), 500
 
+@app.route('/ping', methods=['GET'])
+def ping():
+    return jsonify({'message': 'pong'}), 200
 
 # === PROPERTY ENDPOINT (Placeholder) ===
 @app.route('/predict/property', methods=['POST'])
