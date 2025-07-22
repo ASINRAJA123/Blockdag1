@@ -58,7 +58,7 @@ function App() {
         };
       }
 
-      const response = await fetch(`http://localhost:5000/predict/${selectedCategory}`, {
+      const response = await fetch(`https://blockdag1.vercel.app//predict/${selectedCategory}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
